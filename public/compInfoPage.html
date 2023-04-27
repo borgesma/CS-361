@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SWESalaryApp</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link href="app.css" rel = "stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+
+<body>
+    <h1 class="App-header">
+        Software Engineer (SWE) Compensation Comparison App
+    </h1>
+
+    <div class="w3-bar-block w3-center w3-green">
+        <a href="#" class="w3-bar-item w3-button w3-border">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-border">About</a>
+        <a href="#" class="w3-bar-item w3-button w3-border">News</a>
+        <a href="#" class="w3-bar-item w3-button w3-border">Compare Compensation</a>
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-border w3-center">Companies' Compensation Data Table <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-border">Amazon</a>
+            <a href="#" class="w3-bar-item w3-button w3-border">Google</a>
+            <a href="#" class="w3-bar-item w3-button w3-border">Microsoft</a>
+          </div>
+        </div>
+    </div>
+
+    <br>
+
+    <h4>Please fill out your compensation information below:</h4>
+
+    <br>
+
+    <div class="slider">
+      <i>Years of Experience</i>
+      <input type="range" min="0" max="40" value="10" oninput="rangeValue.innerText = this.value">
+      <i id = "rangeValue">10</i>
+    </div>
+
+    <br><br>
+
+    <div class="input-icon">
+      <i>Base Salary ($)</i>
+      <input type="text">
+      <i>Stock ($)</i>
+      <input type="text">
+      <i>Bonus ($)</i>
+      <input type="text">
+    </div>
+
+    <br><br>
+
+    <div class="city-choice">
+      <em>Closest Metropolitan Area: </em> 
+      <input type="radio"/> New York
+      <input type="radio"/> Miami
+      <input type="radio"/> Chicago
+      <input type="radio"/> Seattle
+      <input type="radio"/> Los Angeles
+      <input type="radio"/> Boston
+      <input type="radio"/> Other
+    </div>
+
+    <br><br>
+
+    <div class="titles">
+      <select id="title-choices">
+        <option>Select a Title/Level</option>
+        <option value = "sweintern">SWE Intern</option>
+        <option> SWE 1</option>
+        <option> SWE 2</option>
+        <option> Senior SWE</option>
+        <option> Staff SWE</option>
+      </select>
+    </div>
+
+    <br><br>
+
+    <div class="w3-button-block w3-center">
+        <a href="#" class="w3-bar-item w3-button w3-border w3-green">Submit Compensation for Comparison</a>
+    </div>
+    <br><br><br>
+    
+</body>
+
+</html>

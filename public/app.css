@@ -1,0 +1,85 @@
+.App-header {
+    background-color: #282c34;
+    align-items:center;
+    text-align: center;
+    justify-content: center;
+    font-size:calc(20px + 2vmin);
+    color: white;
+  }
+
+.Welcome-sign {
+    text-align: center;
+    justify-content: center;
+    font-size:calc(10px + 2vmin)
+  }
+
+.Bar-top {
+    align-items: center;
+}
+
+.Header-sign {
+    text-align: center;
+}
+
+#columnchart_material {
+    align-content: center;
+}
+
+.Sales-pitch {
+    text-align: center;
+}
+
+.slider {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.input-icon {
+    text-align: center;
+}
+
+.city-choice {
+    text-align: center;
+}
+
+.titles {
+    text-align: center;
+}
+
+.about-sign {
+    border: black;
+    border-style: dotted;
+    text-align: center;
+    border-width: auto;
+}
+
+.recent-news {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+    border: black;
+    border-style: dotted;
+    padding: 9px;
+}
+
+.info-sign {
+    text-align: center;
+}
+
+.company-choice {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+  }

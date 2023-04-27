@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SWESalaryApp</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link href="app.css" rel = "stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Company', 'Base Salary', 'Stock', 'Bonus'],
+          ['You', 50, 5, 10],
+          ['Google', 100, 10, 20],
+        ]);
+
+        var options_stacked = {
+          title: 'Salary Comparison Chart', 
+          titlePosition: 'out',
+          isStacked: true,
+          width: 800,
+          height: 500,
+          legend: {position: 'top', alignment: 'center'}, 
+          vAxis: {
+            title: 'Dollars ($)'
+          }
+          
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options_stacked));
+      }
+    </script>
+
+</head>
+
+<body>
+    <h1 class="App-header">
+        Software Engineer (SWE) Compensation Comparison App
+    </h1>
+
+    <div class="w3-bar-block w3-center w3-green">
+        <a href="#" class="w3-bar-item w3-button w3-border">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-border">About</a>
+        <a href="#" class="w3-bar-item w3-button w3-border">News</a>
+        <a href="#" class="w3-bar-item w3-button w3-border">Compare Compensation</a>
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-border w3-center">Companies' Compensation Data Table <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-center">
+            <a href="#" class="w3-bar-item w3-button w3-border">Amazon</a>
+            <a href="#" class="w3-bar-item w3-button w3-border">Google</a>
+            <a href="#" class="w3-bar-item w3-button w3-border">Microsoft</a>
+          </div>
+        </div>
+        
+    </div>
+      
+    <p class="Welcome-sign">
+        Compare your Compensation Information With Selected Companies!
+    </p>
+
+    <p class="info-sign">
+      Information based on:
+      <ul>
+        <li>Years of Experience: 2</li>
+        <li>Title: SWE I</li>
+        <li>Closest Metro Area: New York City</li>
+      </ul>
+    </p>
+
+    <br>
+
+    <div class="company-choice">
+      <input type="radio"/> Google
+      <input type="radio"/> Amazon
+      <input type="radio"/> Microsoft
+    </div>
+
+    <div class="Header-sign">
+        
+    <br>
+    <div id="columnchart_material"; align='center'></div>
+    <br><br><br>
+
+    <br><br><br>
+    
+</body>
+
+</html>
