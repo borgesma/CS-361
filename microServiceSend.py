@@ -4,7 +4,6 @@
 # Description: Implementation of microservice send
 
 import zmq
-from subprocess import call
 
 context = zmq.Context()
 socket = context.socket(zmq.REQ)
