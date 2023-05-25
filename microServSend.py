@@ -1,6 +1,6 @@
 # Name: Marcello Borges
 # Class: CS 361
-# Filename: microServiceSend.py
+# Filename: microServSend.py
 # Description: Implementation of microservice send
 
 # client side
