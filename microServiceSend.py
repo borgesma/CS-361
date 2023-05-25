@@ -3,21 +3,19 @@
 # Filename: microServiceSend.py
 # Description: Implementation of microservice send
 
+# client side
+
 import zmq
+import microServReceive
 
 context = zmq.Context()
+
 socket = context.socket(zmq.REQ)
-socket.connect("tcp://localhost:7000")
-call(["python", "microServiceReceive.py"])
+socket.connect("tcp://localhost:5555")
 
-image_search = input("What image would you like to search for? ")
-number_of_images = input("How many images of " + image_search + " would you like to search for? ")
-requests = [image_search, number_of_images]
-responses = []
+requests = ['Chimp monkeys', '2']
 
-for request in requests:
-    socket.send_string(request)
-    message = socket.recv_string()
-    responses.append(message)
+socket.send_string(requests[0] + "," + requests[1])
+list_of_links = socket.recv_json()
 
-print(responses)
+print(list_of_links)
