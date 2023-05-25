@@ -1,6 +1,6 @@
 # Name: Marcello Borges
 # Class: CS 361
-# Filename: microServiceReceive.py
+# Filename: microServReceive.py
 # Description: Implementation of microservice receive
 
 # server side
