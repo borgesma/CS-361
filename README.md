@@ -3,15 +3,17 @@
 Microservice for partner's project in CS361.
 
 # Communication Contract
-How do you request data from the microservice?
+**How do you request data from the microservice?**
 
-You can request data from the microservice by first running the microServiceSend.py file and then running the python file microServiceSend.py; the user is then prompted to input the image it would like to search and how many of those images they'd like to see. The microServiceSend.py file will then send data to the microServiceReceive.py file.
+You can request data from the microservice by first running the microServSend.py file. What should be sent over the socket is a list where index 0 is a string of a word search and index 1 is a string of the number of images that program wants URLs for. The microServiceSend.py file will then send that list with length 2 to the microServReceive.py file, process it, create image URLs for those search phrase string. This should be sent over with the port number 5555.
 
-How do you receive data from the microservice?
+**How do you receive data from the microservice?**
 
-The data is then received by the same way it is requested. Once you input data requested, it will send the data to the microServiceReceive.py file and return a response to the microServiceSend.py file as a list of values.
+The data received from the microservice is a json of a list of the image URLs for the search phrase. The list will be of the length that the client side program input as index 1 in the initial request data list.
 
 
 # UML Sequence Diagram
 
-![image](https://user-images.githubusercontent.com/102485058/236998095-2d9b31a8-66f6-4436-ac6e-2f0278d10d7c.png)
+![image](https://github.com/borgesma/CS-361/assets/102485058/d2f57d4d-7476-49a6-8597-8ee5f81a3ceb)
+
+
